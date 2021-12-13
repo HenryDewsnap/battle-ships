@@ -11,7 +11,7 @@ def returnEmptyMap(): ##I had to do this because python doesnt have a "new" keyw
     return  [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]
 
 class gameInstance:
-    def __init__(self, mapSize, startingShips):
+    def __init__(self, startingShips):
         self.playerMaps = [returnEmptyMap(), returnEmptyMap()]
         self.startingShips = startingShips
 
@@ -57,5 +57,5 @@ class gameInstance:
         
         
 if __name__ == "__main__":
-    game = gameInstance(10, ["cruiser"])
+    game = gameInstance(["cruiser"])
     game.gameLoop()
